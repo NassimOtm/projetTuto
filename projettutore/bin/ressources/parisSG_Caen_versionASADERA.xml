@@ -1,0 +1,378 @@
+<match>
+	<equipes>
+		<domicile>Paris-SG</domicile>
+		<exterieur>Caen</exterieur>
+	</equipes>
+	<competition>Ligue1</competition>
+	<journee></journee>
+	Parc des Princes
+	<spectateurs>47490</spectateurs>
+	<scoreMitemps>
+		<domicile>1</domicile>
+		<exterieur>0</exterieur>
+	</scoreMitemps>
+	<scoreFinal>
+		<domicile>3</domicile>
+		<exterieur>1</exterieur>
+	</scoreFinal>
+	<cartonsJaunes>
+		<domicile>2</domicile>
+		<exterieur>2</exterieur>
+	</cartonsJaunes>
+	<cartonsRouges>
+		<domicile>0</domicile>
+		<exterieur>0</exterieur>
+	</cartonsRouges>
+	<resume>
+		Face à des Caennais qui ont surtout misé sur les arrêts de Vercoutre, 
+		le Paris-SG termine l'année 2017 par un succès à domicile, le 10e en 10 matches. 
+		Mbappé, qui fêtait son 19e anniversaire, a réussi une passe décisive et un but du gauche. 
+		Cavani et Berchiche ont participé à la fête au Parc.
+	</resume>
+	<compteRendu>
+		<faitJeu>
+			<minute>90+1</minute>
+			<commentaire>L'arbitre oublie de siffler un penalty. 
+			Neymar, qui a perdu son face à face dans la surface avec Rémy Vercoutre, 
+			a été accroché par le maillot par le gardien caennais.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>90</minute>
+			<commentaire>Temps additionnel : 2 minutes.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>90</minute>
+			<commentaire>But d'Ivan Santini ! 
+			Le Croate ajuste Kevin Trapp avec une frappe à ras de terre du pied droit. 
+			Le gardien allemand est pris sur sa gauche.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>90</minute>
+			<commentaire>Carton jaune pour Thiago Silva (PSG), 
+			sanctionné pour une main dans sa surface.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>89</minute>
+			<commentaire>Penalty pour Caen. Sur la frappe de Ronny Rodelin, 
+			Thiago Silva a détourné avec le coude droit. L'arbitre montre le point blanc.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>88</minute>
+			<commentaire>Paris dilapide une occasion franche. 
+			Servi dans l'axe, Edinson Cavani tergiverse à l'entrée de la surface, 
+			revient sur lui-même, avant de servir Javier Pastore, trop court. 
+			Neymar était démarqué, côté opposé.</commentaire>
+		</faitJeu>
+		<faitJeu>
+			<minute>85</minute>
+			<commentaire>Kevin Trapp ne prend pas de risque et se couche dans sa surface, 
+			devançant Ivan Santini. Adama Mbengue avait centré côté gauche.</commentaire>
+		</faitJeu>
+		<faitJeu>
+			<minute>84</minute>
+			<commentaire>Javier Pastore propose une passe tranchante sur l'aile droite, où Kylian Mbappé centre 
+			et cherche Edinson Cavani, devancé par Ismaël Diomandé, 
+			qui enlève un ballon brûlant dans sa surface.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>82</minute>
+			<commentaire>Dernier changement en faveur du Paris-SG. Thomas Meunier a été remplacé par Christopher Nkunku.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>81</minute>
+			<commentaire>But de Yuri Berchiche. Le Paris-SG s'envole. 
+			Servi par Neymar, le latéral gauche se présente dans la surface, élimine Baissama Sankoh, 
+			avant de déclencher une frappe sèche et croisée du pied gauche. Dans le petit filet opposé.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>77</minute>
+			<commentaire>Sur un service de Vincent Bessat, côté gauche, Ivan Santini, 
+			oublié au marquage dans la surface parisienne, coupe de la tête et fait briller Kevin Trapp, 
+			décisif avec une claquette. Le corner ne donnera rien.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>76</minute>
+			<commentaire>Kylian Mbappé force encore le passage sur le couloir droit. 
+			Il lève la tête et cherche Neymar, qui manque son contrôle vers le point de penalty.</commentaire>
+		</faitJeu>
+		<faitJeu>
+			<minute>74</minute>
+			<commentaire>Côté gauche, Neymar prend le coup franc et cherche le côté fermé avec une frappe du pied droit travaillée. Rémy Vercoutre renvoie avec les deux poings près de son poteau droit.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>73</minute>
+			<commentaire>Accroché par Adama Mbengue sur le côté gauche, au niveau de la surface caennaise, 
+			Yuri Berchiche récolte un coup franc dangereux.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>71</minute>
+			<commentaire>Deuxième changement commandé par Unai Emery. 
+			Thiago Motta, de retour de blessure, a été remplacé par Julian Draxler.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>71</minute>
+			<commentaire>Et Stef Peeters a laissé sa place à Vincent Bessat, côté Caen.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>70</minute>
+			<commentaire>Double changement en faveur des visiteurs. Jonathan Delaplace a d'abord été remplacé 
+			par Jordan Nkololo.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>69</minute>
+			<commentaire>Javier Pastore casse la ligne avec une passe dans le dos de la défense. 
+			Neymar se présente dans la surface et frappe à ras de terre du pied droit. 
+			Rémy Vercoutre détourne sur son poteau gauche.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>67</minute>
+			<commentaire>Ronny Rodelin, sorti de son camp, combine avec Stef Peeters, 
+			qui tergiverse et perd le ballon.</commentaire>
+		</faitJeu>
+		<faitJeu>
+			<minute>66</minute>
+			<commentaire>Les caennais subissent de plus en plus sur la pelouse du Parc des Princes. 
+			Ronny Rodelin défend essentiellement dans son camp.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>65</minute>
+			<commentaire>Premier changement en faveur du Paris-SG. 
+			Marquinhos a été remplacé par Stanley N'Soki, dont c'est la première à ce niveau.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>64</minute>
+			<commentaire>Coup dur pour le Paris-SG. Marquinhos va devoir sortir. 
+			Le Brésilien semble avoir un pépin physique.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>62</minute>
+			<commentaire>Giovani Lo Celso réussit un festival sur le côté droit, 
+			élimine Ismaël Diomandé et Stef Peeters, avant de proposer une frappe lobée du gauche à l'entrée de la surface. 
+			Rémy Vercoutre sauve avec une manchette du bras droit. Corner.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>60</minute>
+			<commentaire>Le Paris-SG est invaincu lors de ses 32 derniers matches à domicile en Ligue 1 (26 victoires, 6 nuls). 
+			Son dernier revers au Parc des Princes datant du 20 mars 2016, contre Monaco (0-2).
+			</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>57</minute>
+			<commentaire>But de Kylian Mbappé. Le Paris-SG réussit le break. 
+			Le ballon perdu par Aït Bennasser profite à Neymar, séché par Diomandé. 
+			Lo Celso perce et fait la différence côté gauche, avant de centrer en retrait. 
+			Mbappé finit avec une demi-volée du gauche.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>56</minute>
+			<commentaire>Kylian Mbappé insiste à nouveau sur le côté droit, avant de renverser vers le second poteau, 
+			où Edinson Cavani contrôle de la poitrine et frappe au ras du poteau droit.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>55</minute>
+			<commentaire>Damien Da Silva (Caen), auteur d'une semelle sur Neymar évite miraculeusement le carton jaune.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>53</minute>
+			<commentaire>Adama Mbengue menace côté gauche. Au bout de son raid, il centre fort dans la surface. 
+			Marquinhos repousse de la tête vers Frédéric Guilbert. 
+			A droite de la surface, l'ancien bordelais contrôle et frappe du droit. 
+			Kevin Trapp détourne de la main droite.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>50</minute>
+			<commentaire>L'arbitre convoque Kylian Mbappé et Rémy Vercoutre, 
+			qui a estimé que l'attaquant ne l'avait pas suffisamment évité. Le calme et les sourires reviennent.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>49</minute>
+			<commentaire>Neymar part dans l'axe, s'offre une longue course, avant de servir Kylian Mbappé dans la profondeur. 
+			L'attaquant parisien vient buter sur Rémy Vercoutre, bien sorti au sol sur sa gauche. 
+			Le gardien bloque en deux temps.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>47</minute>
+			<commentaire>Unai Emery et Patrice Garande n'ont pas effectué de changement pendant la pause. 
+			Yuri Berchiche, qui a bénéficié d'une talonnade de Neymar, prend le couloir gauche, 
+			mais pousse trop son ballon. Et il commet une faute.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>45</minute>
+			<commentaire>Le Paris-SG a pris l'ascendant au terme d'une action de classe. 
+			Grâce à une accélération sur l'aile droite, Mbappé a dynamité la défense caennaise. 
+			Et Cavani, auteur de son 19ème but en L1, a terminé le mouvement avec une talonnade splendide. 
+			Trapp a aussi été décisif sur une frappe de Rodelin.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>43</minute>
+			<commentaire>La dernière victoire de Caen sur la pelouse du Parc des Princes en Ligue 1, remonte au 1er décembre 2007 (0-1). 
+			Nicolas Florentin (76ème) avait inscrit le but de la victoire, lors de la 16ème journée.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>42</minute>
+			<commentaire>Sans élan, Neymar enroule du pied droit. 
+			Le ballon contourne le mur et passe tout près de la transversale de Rémy Vercoutre. 
+			Le gardien caennais semblait très loin du ballon.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>41</minute>
+			<commentaire>Le Paris-SG récupère un coup franc dangereux, tout près de la surface caennaise, 
+			côté droit. Damien Da Silva, en retard, a stoppé irrégulièrement Neymar.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>39</minute>
+			<commentaire>Touché dans la surface par Kylian Mbappé, Neymar, cerné par plusieurs adversaires, 
+			remise vers Javier Pastore. 
+			Sa frappe du droit en première intention finit dans les bras de Rémy Vercoutre, attentif au milieu de son but.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>38</minute>
+			<commentaire>Sur un centre de Giovani Lo Celso, côté droit, Kylian Mbappé ne cadre pas sa volée du pied droit au second poteau. 
+			L'ancien monégasque a été signalé en position de hors-jeu.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>36</minute>
+			<commentaire>Carton jaune pour Jonathan Delaplace (Caen), 
+			sanctionné pour une obstruction sur Kylian Mbappé.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>36</minute>
+			<commentaire>A droite, Stef Peeters (Caen) frappe un nouveau corner. 
+			Thomas Meunier décolle dans sa surface et devance Damien Da Silva de la tête.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>35</minute>
+			<commentaire>Ronny Rodelin, dont la frappe lointaine a été contrée, récupère un corner. 
+			Ivan Santini avait laissé passer le ballon.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>33</minute>
+			<commentaire>Thiago Silva domine dans sa surface 
+			et dans le combat aérien sur le centre délivré à gauche par Stef Peeters. 
+			Ivan Santini ne sera pas sollicité.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>32</minute>
+			<commentaire>Après un échange avec Giovani Lo Celso, 
+			Edinson Cavani trouve une nouvelle position de frappe sur la gauche de la surface. 
+			Baissama Sankoh contre et le ballon revient sur Javier Pastore. 
+			Le ballon sort en six mètres.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>30</minute>
+			<commentaire>Neymar s'appuie à droite sur Kylian Mbappé, 
+			qui centre dans la surface normande, où Frédéric Guilbert remise de la poitrine vers Rémy Vercoutre. 
+			Edinson Cavani guettait l'offrande au second poteau.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>29</minute>
+			<commentaire>Thomas Meunier accélère sur le couloir droit, mais cette fois, 
+			Damien Da Silva résiste et ne se laisse pas effacer. Le ballon sort en touche.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>28</minute>
+			<commentaire>Sur un dégagement de Rémy Vercoutre, 
+			Marquinhos récupère et allonge vers Neymar, qui remise de la tête vers 
+			Edinson Cavani. Celui-ci contrôle dans la surface et frappe du pied gauche. 
+			A gauche du gardien caennais.</commentaire>
+		</faitJeu>
+		<faitJeu>
+			<minute>27</minute>
+			<commentaire>Neymar prend l'axe et après un relais avec Kylian Mbappé, 
+			le Brésilien manque sa reprise du pied droit à l'entrée de la surface. 
+			Rémy Vercoutre bloque sans opposition.</commentaire>
+		</faitJeu>
+		<faitJeu>
+			<minute>24</minute>
+			<commentaire>Caen réagit avec Ronny Rodelin, 
+			dont la volée du pied gauche aux vingt mètres, fait briller Kevin Trapp, décisif sur sa gauche avec les poings.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>21</minute>
+			<commentaire>But de Cavani. Le PSG prend l'ascendant au terme d'une action splendide. 
+			Mbappé élimine Mbengue, accélère à droite et dépose Da Silva, 
+			avant de centrer. Cavani, dans le mouvement, finit avec une talonnade du droit. 
+			Au-dessus de l'épaule de Vercoutre.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>19</minute>
+			<commentaire>Carton jaune pour Yuri Berchichejoueur> (Paris-SG), 
+			sanctionné pour un tacle appuyé sur Ronny Rodelin.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>17</minute>
+			<commentaire>Le Paris-SG confisque le ballon, 
+			mais la domination des joueurs de la capitale est stérile pour le moment. 
+			Sur le côté droit, Neymar, sans solution, perd le ballon.</commentaire>
+		</faitJeu>
+		<faitJeu>
+			<minute>15</minute>
+			<commentaire>Les joueurs d'Unai Emery, qui peinent à s'approcher de la surface adverse, 
+			vont devoir mettre davantage de vitesse pour déstabiliser un bloc très compact.</commentaire>
+		</faitJeu>
+		<faitJeu>
+			<minute>14</minute>
+			<commentaire>Thomas Meunier jaillit sur son aile droite et 
+			intercepte la passe de Youssef Aït Bennasser, 
+			avant de centrer vers le point de penalty, où Edinson Cavani ose la volée du pied droit. 
+			Dans le ventre d'Ismaël Diomandé, qui s'est sacrifié.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>13</minute>
+			<commentaire>Carton jaune pour Stef Peeters. 
+			Le Caennais, qui fête sa première titularisation, a été sanctionné pour une semelle sur Neymar.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>11</minute>
+			<commentaire>A droite, Giovani Lo Celso joue court et sollicite Neymar. 
+			Le centre parisien qui suit est repoussé de la tête par Damien Da Silvajoueur>.</commentaire>
+		</faitJeu>
+		<faitSportif>
+			<minute>10</minute>
+			<commentaire>L'an passé, Caen était venu chercher son maintien au Parc des Princes 
+			en arrachant un nul dans le temps additionnel (1-1), lors de la 38ème journée, le 20 mai 2017. 
+			Ronny Rodelin (90e 1) avait répondu à Adrien Rabiot (13e).</commentaire>
+		</faitSportif>
+		<faitArbitral>
+			<minute>8</minute>
+			<commentaire>Kevin Trapp sort aux poings sous la menace d'Ismaël Diomandé. 
+			Stef Peeters avait frappé le premier corner de la rencontre, côté gauche.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>7</minute>
+			<commentaire>Adama Mbengue et les visiteurs viennent chercher le premier corner de la rencontre. 
+			Le Sénégalais avait déjà proposé un centre dangereux sur son couloir gauche.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>5</minute>
+			<commentaire>Occasion pour le Paris-SG. 
+			Javier Pastore lance Kylian Mbappéjoueur> dans l'espace et sur la droite de la surface, 
+			où il élimine Rémy Vercoutre, sorti au sol. L'attaquant enchaîne avec une frappe du pied droit. Au-dessus.</commentaire>
+		</faitJeu>
+		<faitJeu>
+			<minute>4</minute>
+			<commentaire>Faute assez grossière de Frédéric Guilbert sur Neymar, 
+			parti dans son dos. L'arbitre sanctionne verbalement.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>3</minute>
+			<commentaire>Pour ce dernier match de l'année, le public parisien assiste peut-être au dernier match de 
+			Javier Pastore ou d'Angel Di Mariajoueur> sous les couleurs du club de la capitale.</commentaire>
+		</faitArbitral>
+		<faitJeu>
+			<minute>2</minute>
+			<commentaire>Kylian Mbappé, qui adopte une nouvelle coupe de cheveux pour fêter son 19ème anniversaire, 
+			régale le public avec une série de gestes techniques face à Youssef Aït Bennasser.</commentaire>
+		</faitJeu>
+		<faitArbitral>
+			<minute>1</minute>
+			<commentaire>L'arbitre, Monsieur Karim Abed, a sifflé le coup d'envoi de la première période. 
+			Les Parisiens ont engagé au Parc des Princes.</commentaire>
+		</faitArbitral>
+		<faitArbitral>
+			<minute>0</minute>
+			<commentaire>Après cette dernière journée de la phase aller de la Ligue 1, 
+			la délégation du Paris-SG s'envolera vers Doha pour le Qatar Winter Tour.</commentaire>
+		</faitArbitral>
+	</compteRendu>
+</match>
