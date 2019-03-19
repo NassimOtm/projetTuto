@@ -30,6 +30,7 @@ public class Match {
 		try{
 			this.integrerDansBD();
 			this.obtenirId();
+			this.insererCommentaires();
 			this.nbCartonsJaunes();
 		}catch(SQLException e){
 			System.out.println("Erreur lors de l'insertion dans la base de donnees");
@@ -108,7 +109,7 @@ public class Match {
 		List<Element> resume=doc.getRootElement().getChildren();
 		for(Element e : resume){
 			if(e.getName().equals("resume")){
-				this.resume=new Commentaire(e.getValue().toString(),-1,connect);
+				this.resume=new Commentaire(e.getValue().toString(),"-1",connect);
 			}
 		}
 	}
@@ -150,25 +151,19 @@ public class Match {
 	}
 	
 	public void insererCommentaires(){
-		int minute=0;
+		String minute="";
 		String texte="";
 		List<Element> faitJeu=doc.getRootElement().getChild("compteRendu").getChildren();
+		
 		for(Element e: faitJeu){
-			System.out.println(e);
-			if(e.getName().equals("minute")){
-				System.out.println(e.getValue());
-				minute=Integer.parseInt(e.getValue());
-			}		
-			if(e.getName().equals("commentaire")){
-				System.out.println(e.getValue());
-				texte=e.getValue();
-			}
-			Commentaire com=new Commentaire(texte,minute,this.connect);
-			try{
-			com.ajouterABD(this.id);
-			}catch (SQLException err){
-				System.out.println("Erreur lors de l'insertion des commentaires");
-			}
+			minute=e.getChildText("minute");
+			texte=e.getChildText("commentaire");
+				Commentaire com=new Commentaire(texte,minute,this.connect);
+				try{	
+					com.ajouterABD(this.id);
+				}catch (SQLException err){
+					System.out.println("Erreur lors de l'insertion des commentaires");
+				}	
 		}
 	}
 	
@@ -180,7 +175,7 @@ public class Match {
 		this.trouverCompetition();
 		this.trouverNbSpectateur();
 		this.trouverResume();
-		this.insererCommentaires();
+		
 	}
 	
 	public void integrerDansBD() throws SQLException{

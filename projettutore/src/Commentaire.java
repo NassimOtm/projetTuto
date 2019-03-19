@@ -35,7 +35,7 @@ public class Commentaire {
 	
 	public void ajouterABD(int idMatch) throws SQLException{
 		Statement state = this.connect.createStatement();
-		String requete="insert into projettutore.commentaire values (DEFAULT,"+this.texte+",'"+this.minute+"',"+idMatch+")";
+		String requete="insert into projettutore.commentaire values (DEFAULT,'"+this.texte+"','"+this.minute+"',"+idMatch+")";
 		System.out.println(requete);
 		state.executeUpdate(requete);
 	}
