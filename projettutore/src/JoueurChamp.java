@@ -8,12 +8,11 @@ public class JoueurChamp {
 	private int id;
 	private Connection connect;
 	
-	public JoueurChamp(String nom, String prenom, String poste, int id, Connection connect) {
+	public JoueurChamp(String nom, String prenom, String poste, Connection connect) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
 		this.poste = poste;
-		this.id = id;
 		this.connect = connect;
 	}
 	
