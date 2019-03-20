@@ -31,7 +31,7 @@ public class Match {
 			this.integrerDansBD();
 			this.obtenirId();
 			this.insererCommentaires();
-			this.nbCartonsJaunes();
+			this.nbCartonsEquipes();
 		}catch(SQLException e){
 			System.out.println("Erreur lors de l'insertion dans la base de donnees");
 		}
@@ -114,7 +114,7 @@ public class Match {
 		}
 	}
 	
-	public void nbCartonsJaunes() throws SQLException{
+	public void nbCartonsEquipes() throws SQLException{
 		
 		Statement state = this.connect.createStatement();
 		String requeteDom,requeteExt;
@@ -157,14 +157,25 @@ public class Match {
 		
 		for(Element e: faitJeu){
 			minute=e.getChildText("minute");
-			texte=e.getChildText("commentaire");
+			texte=e.getValue().substring(10);
 				Commentaire com=new Commentaire(texte,minute,this.connect);
 				try{	
 					com.ajouterABD(this.id);
+					if(com.parleBut()){
+						System.out.println(minute+"\nBut de ");
+						this.insererButeur(e.getChild("commentaire"));
+					}
 				}catch (SQLException err){
 					System.out.println("Erreur lors de l'insertion des commentaires");
 				}	
 		}
+	}
+	
+	public void insererButeur(Element e){
+		
+		String buteur=e.getChildText("joueur");
+		System.out.println(buteur);
+		
 	}
 	
 	public void trouverDonnees(){

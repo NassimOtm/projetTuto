@@ -40,51 +40,16 @@ public class Main {
 		}while(erreurConnect);	
 		System.out.println("Connexion reussi");
 		
-		File fichier = new File("src/ressources/parisSG_Caen_versionASADERA.xml");
+		File fichier = new File("src/ressources/parisSG_Caen_versionASADERA_joueur.xml");
 		Document doc=lireXML(fichier);
 		Match match=new Match(connect,doc);
+	/*	List<Element> faitJeu=doc.getRootElement().getChild("compteRendu").getChildren();
+		
+		for(Element e: faitJeu){
+			System.out.println(e.getValue());
+		}*/
 	}
 	
-	public static void insererRequete(String query,Connection connect) throws SQLException{
-		
-		Statement state = connect.createStatement();
-		state.executeUpdate(query);
-	}
-	
-	public static ResultSet effectuerRequete(String query,Connection connect) throws SQLException{
-		
-		Statement state = connect.createStatement();
-		ResultSet result = state.executeQuery(query);
-	    
-		if(result.next()){
-			System.out.println("La requete a bien ete executee");
-		}
-		else{
-			System.out.println("La requete n'a pas ete correctement execute");
-		}
-		
-		return result;
-	}
-	
-	public static void afficherTable(ResultSet result) throws SQLException{
-		
-		ResultSetMetaData resultMeta = result.getMetaData();
-		
-		while(result.next()){	
-			for(int i = 1; i <= resultMeta.getColumnCount(); i++){
-				System.out.print(result.getObject(i).toString() + "\t");
-			}
-			System.out.println();
-		}
-		
-	}
-	public static String selectionnerDonnees(Connection connect){
-		
-		String classe;
-		String query="select * from projettutore.equipe";
-	
-		return query;
-	}
 	
 	public static Document lireXML(File fichier) {
 		

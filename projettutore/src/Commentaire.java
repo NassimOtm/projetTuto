@@ -39,33 +39,13 @@ public class Commentaire {
 	public boolean parleBut(){
 		return this.texte.contains("But");
 	}
-	/*
-	public JoueurChamp joueurButeur(){
-		
-		String nom, prenom;
-		String motEnCours="";
-		boolean trouve=false;
-		boolean commenceMajuscule=false;
-		int indice=0;
-		Character lettreMaj;
-		
-		while(!trouve){
-			
-			commenceMajuscule=this.texte.charAt(indice)==Character.toUpperCase(this.texte.charAt(indice));
-			if(commenceMajuscule)
-		}
-		
-		return new JoueurChamp(nom,prenom,null,this.connect);		
-	}
-	*/
+	
+
 	public void ajouterABD(int idMatch) throws SQLException{
 		Statement state = this.connect.createStatement();
 		String requete="insert into projettutore.commentaire values (DEFAULT,'"+this.texte+"','"+this.minute+"',"+idMatch+")";
-		System.out.println(requete);
 		state.executeUpdate(requete);
 	}
-	
-	 
 
 	public String getTexte() {
 		return texte;
