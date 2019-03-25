@@ -41,9 +41,9 @@ public class Commentaire {
 	}
 	
 
-	public void ajouterABD(int idMatch) throws SQLException{
+	public void ajouterABD(int idMatch, boolean estFaitArbitral) throws SQLException{
 		Statement state = this.connect.createStatement();
-		String requete="insert into projettutore.commentaire values (DEFAULT,'"+this.texte+"','"+this.minute+"',"+idMatch+")";
+		String requete="insert into projettutore.commentaire values (DEFAULT,'"+this.texte+"','"+estFaitArbitral+"','"+this.minute+"',"+idMatch+")";
 		state.executeUpdate(requete);
 	}
 

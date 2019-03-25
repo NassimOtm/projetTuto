@@ -29,18 +29,23 @@ public class JoueurChamp {
 		
 		Statement state = this.connect.createStatement();
 		String requete="";
-		System.out.println(this.nom.length());
 		if(this.nom.length()!=0){
-			requete="select idjoueur from projettutore.joueurChamp where (nom='"+this.nom+"' and prenom='"+this.prenom+"') OR (nom='"+this.prenom+"' and prenom='"+this.nom+"')";
+			requete="select idjoueur from projettutore.joueur where (nom='"+this.nom+"' and prenom='"+this.prenom+"') OR (nom='"+this.prenom+"' and prenom='"+this.nom+"')";
 		}
 		else{
-			requete="select idjoueur from projettutore.joueurChamp where nom='"+this.prenom+"' or prenom='"+this.prenom+"'";
-			//select idjoueur from projettutore.joueurChamp where nom='Cavani' or prenom='Cavani');
+			requete="select idjoueur from projettutore.joueur where nom='"+this.prenom+"' or prenom='"+this.prenom+"'";
+			
 		}
 		ResultSet result= state.executeQuery(requete);
 		ResultSetMetaData resultMeta = result.getMetaData();
-		if(result.next());
-			this.id=Integer.parseInt(result.getObject(1).toString());		
+		if(result.next()){
+			this.id=Integer.parseInt(result.getObject(1).toString());	
+		}	
+		else{
+			requete="INSERT INTO projettutore.joueur values (DEFAULT,'"+this.nom+"','"+this.prenom+"',NULL,NULL)";
+			state.executeUpdate(requete);
+			this.obtenirId();
+		}
 	}
 
 	public String getNom() {

@@ -12,16 +12,18 @@ public class Match {
 
 	private Equipe equipeDomicile;
 	private Equipe equipeExterieure;
+	private Arbitre arbitre;
 	private String stade;
 	private int nbSpectateur;
 	private Competition compet;
 	private Commentaire resume;
-	private String scoreMT;
-	private String scoreFT;
 	private Connection connect;
 	private Document doc;
 	private int id;
 	private String sport;
+	private int point=1;
+	private int pointBonnifie=1;
+	private int pointFauteTechnique=1;
 	
 	
 	public Match(Connection connect, Document doc) {
@@ -31,14 +33,11 @@ public class Match {
 		this.trouverDonnees();
 		try{
 			if(!(this.matchExiste())){
-				System.out.println("match existe pas");
 			this.integrerDansBD();
 			this.obtenirId();
 			this.insererCommentaires();
-			/*this.nbCartonsEquipes();*/
-			}
-			else{
-				System.out.println("le match existe deja");
+			//this.equipeJouent();
+			//this.nbCartonsEquipes();
 			}
 		}catch(SQLException e){
 			System.out.println("Erreur lors de l'insertion dans la base de donnees");
@@ -74,33 +73,6 @@ public class Match {
 		}
 	}
 	
-	public void trouverScoreMT(){
-		String score="";
-		List<Element> listerEquipes = doc.getRootElement().getChild("scoreMitemps").getChildren();
-		for(Element e : listerEquipes){
-			if(e.getName().equals("domicile")){
-				score=score+e.getValue().toString()+"-";
-			}				
-			if(e.getName().equals("exterieur")){
-				score=score+e.getValue().toString();
-			}
-		}
-		this.scoreMT=score;
-	}
-	
-	public void trouverScoreFT(){
-		String score="";
-		List<Element> listerEquipes = doc.getRootElement().getChild("scoreFinal").getChildren();
-		for(Element e : listerEquipes){
-			if(e.getName().equals("domicile")){
-				score=score+e.getValue().toString()+"-";
-			}				
-			if(e.getName().equals("exterieur")){
-				score=score+e.getValue().toString();
-			}
-		}
-		this.scoreFT=score;
-	}
 	
 	public void trouverCompetition(){
 		List<Element> compet=doc.getRootElement().getChildren();
@@ -127,6 +99,25 @@ public class Match {
 				this.resume=new Commentaire(e.getValue().toString(),"-1",connect);
 			}
 		}
+	}
+	
+	public void trouverArbitre(){
+		String nom="";
+		String prenom="";
+		String arbitre="";
+		int indice=0;
+		while(indice<arbitre.length() && arbitre.charAt(indice)!=' '){
+			prenom+=arbitre.charAt(indice);
+			indice++;
+		}
+		indice++;
+		while(indice<arbitre.length()){
+			nom+=arbitre.charAt(indice);
+			indice++;
+		}
+		
+		this.arbitre=new Arbitre(nom,prenom,this.connect);
+		
 	}
 	
 	public void nbCartonsEquipes() throws SQLException{
@@ -165,23 +156,56 @@ public class Match {
 		
 	}
 	
+	public void insererJoueur(Element e) throws SQLException{
+		String joueur=e.getChildText("joueur");
+		String nom="";
+		String prenom="";
+		
+		Statement state = this.connect.createStatement();
+		int indice=0;
+		while(indice<joueur.length() && joueur.charAt(indice)!=' '){
+			prenom+=joueur.charAt(indice);
+			indice++;
+		}
+		indice++;
+		while(indice<joueur.length()){
+			nom+=joueur.charAt(indice);
+			indice++;
+		}
+		String poste=e.getChildTextTrim("joueur").getAttribute("poste").toString();
+		System.out.println(poste);
+		JoueurChamp player=new JoueurChamp(nom,prenom,null,this.connect); 
+		int idjoueur=player.getId();
+		String requete="Insert into projettutore.aJoueMatch Values (0,0,0,0,"+idjoueur+","+this.id+")";
+		System.out.println(requete);
+		state.executeUpdate(requete);
+	}
+	
 	public void insererCommentaires(){
 		String minute="";
 		String texte="";
 		List<Element> faits=doc.getRootElement().getChild("compteRendu").getChildren();
 		
-		for(Element e: faits){
+		for(Element e: faits){				
 			minute=e.getChildText("minute");
 			texte=e.getValue().substring(10);
 				Commentaire com=new Commentaire(texte,minute,this.connect);
-				try{	
-					com.ajouterABD(this.id);
-					if(com.parleBut()){
-						this.insererButeur(e.getChild("commentaire"));
-					}
+				try{
+				//	if(e.getChildText("joueur")!=null){
+					//	this.insererJoueur(e);
+					//}
+					com.ajouterABD(this.id,e.getName().equals("faitArbitral"));
+					
 				}catch (SQLException err){
 					System.out.println("Erreur lors de l'insertion des commentaires");
 				}	
+				try{
+				if(com.parleBut()){
+					this.insererJoueur(e.getChild("commentaire"));
+				}
+				}catch(SQLException excep){
+					System.out.println("erreur lors de l'insertion ds buteurs");
+				}
 		}
 	}
 	
@@ -205,20 +229,54 @@ public class Match {
 		
 		JoueurChamp player=new JoueurChamp(nom,prenom,null,this.connect); 
 		int idjoueur=player.getId();
-		String requete="Insert into projettutore.aJoueMatch Values ("+this.id+","+idjoueur+",null,null,null,null,1)";
+		/*String requete="Insert into projettutore.aJoueMatch Values ("+this.id+","+idjoueur+",null,null,null,null,1)";
 		System.out.println(requete);
-		state.executeUpdate(requete);
+		state.executeUpdate(requete);*/
+	}
+	
+	public void equipeJouent() throws SQLException{
+		
+		List<Element> scoreMi=doc.getRootElement().getChild("scoreMitemps").getChildren();
+		List<Element> scoreFin=doc.getRootElement().getChild("scoreFinal").getChildren();
+		Statement state = this.connect.createStatement();
+		
+		int miTempsDomicile=0;
+		int miTempsExterieur=0;
+		int finMatchDomicile=0;
+		int finMatchExterieur=0;
+		
+		for(Element e:scoreMi){
+			if(e.getName().equals("domicile")){
+				miTempsDomicile=Integer.parseInt(e.getValue());
+			}
+			else{
+				miTempsExterieur=Integer.parseInt(e.getValue());
+			}
+		}
+		
+		for(Element e:scoreFin){
+			if(e.getName().equals("domicile")){
+				finMatchDomicile=Integer.parseInt(e.getValue());
+			}
+			else{
+				finMatchExterieur=Integer.parseInt(e.getValue());
+			}
+		}
+		String requeteDom="insert into projettutore.joueDomicile values ("+this.equipeDomicile.getId()+","+this.id+","+miTempsDomicile+","+finMatchDomicile+")";
+		System.out.println(requeteDom);
+		String requeteExt="insert into projettutore.joueExterieur values ("+this.equipeExterieure.getId()+","+this.id+","+miTempsExterieur+","+finMatchExterieur+")";
+		System.out.println(requeteExt);
+		state.executeUpdate(requeteDom);
+		state.executeUpdate(requeteExt);
 	}
 	
 	public void trouverDonnees(){
 		this.trouverEquipes();
 		this.trouverStade();
-		this.trouverScoreMT();
-		this.trouverScoreFT();
 		this.trouverCompetition();
 		this.trouverNbSpectateur();
 		this.trouverResume();
-		
+
 	}
 	
 	public void integrerDansBD() throws SQLException{
@@ -234,7 +292,7 @@ public class Match {
 		String requete="select idmatch from projettutore.match where resume='"+this.resume.getTexte()+"'"; 
 		ResultSet result= state.executeQuery(requete);
 		ResultSetMetaData resultMeta = result.getMetaData();
-		if(result.next());
+		if(result.next())
 			this.id=Integer.parseInt(result.getObject(1).toString());		
 	}
 }

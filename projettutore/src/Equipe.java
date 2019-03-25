@@ -31,15 +31,11 @@ public class Equipe {
 			ResultSet result= state.executeQuery("select idequipe,paysequipe from projettutore.equipe WHERE nomequipe='"+this.nom+"'");
 			ResultSetMetaData resultMeta = result.getMetaData();
 			if(result.next()){
-				System.out.println("equipe trouver");
-				System.out.println("l'id"+Integer.parseInt(result.getObject(1).toString()));
 				this.id=Integer.parseInt(result.getObject(1).toString());
 				if(result.getObject(2)!=null)
 				this.pays=result.getObject(2).toString();
 			}
-			else{
-				System.out.println("insertion equipe");
-				System.out.println("INSERT INTO projettutore.equipe VALUES ('"+this.nom+"',NULL,DEFAULT)");
+			else{			
 				state.executeUpdate("INSERT INTO projettutore.equipe VALUES ('"+this.nom+"',NULL,DEFAULT)");
 				this.trouverDonnees();
 			}

@@ -31,7 +31,6 @@ public class Competition {
 		ResultSetMetaData resultMeta = result.getMetaData();
 		if(result.next()){
 			this.id=Integer.parseInt(result.getObject(1).toString());
-			System.out.println("competition trouver");
 		}
 		else{
 			System.out.println();
