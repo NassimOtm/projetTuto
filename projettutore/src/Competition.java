@@ -27,10 +27,17 @@ public class Competition {
 
 	public void trouverId() throws SQLException{
 		Statement state = this.connect.createStatement();
-		ResultSet result= state.executeQuery("select idcompetition from projettutore.Compétition WHERE nomcompetition='"+this.nom+"'");
+		ResultSet result= state.executeQuery("select idcompetition from projettutore.Competition WHERE nomcompetition='"+this.nom+"'");
 		ResultSetMetaData resultMeta = result.getMetaData();
-		if(result.next())
+		if(result.next()){
 			this.id=Integer.parseInt(result.getObject(1).toString());
+			System.out.println("competition trouver");
+		}
+		else{
+			System.out.println();
+			state.executeUpdate("INSERT INTO projettutore.competition VALUES (DEFAULT,'"+this.nom+"')");
+			this.trouverId();
+		}
 }
 	
 	

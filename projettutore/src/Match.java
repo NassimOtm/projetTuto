@@ -21,6 +21,8 @@ public class Match {
 	private Connection connect;
 	private Document doc;
 	private int id;
+	private String sport;
+	
 	
 	public Match(Connection connect, Document doc) {
 		super();
@@ -28,14 +30,27 @@ public class Match {
 		this.doc=doc;
 		this.trouverDonnees();
 		try{
+			if(!(this.matchExiste())){
+				System.out.println("match existe pas");
 			this.integrerDansBD();
 			this.obtenirId();
 			this.insererCommentaires();
-			this.nbCartonsEquipes();
+			/*this.nbCartonsEquipes();*/
+			}
+			else{
+				System.out.println("le match existe deja");
+			}
 		}catch(SQLException e){
 			System.out.println("Erreur lors de l'insertion dans la base de donnees");
 		}
 		
+	}
+	
+	public boolean matchExiste() throws SQLException{
+		Statement state = this.connect.createStatement();
+		ResultSet result= state.executeQuery("select * from projettutore.match WHERE resume='"+this.resume.getTexte()+"'");
+		ResultSetMetaData resultMeta = result.getMetaData();
+		return result.next();
 	}
 	
 	public void trouverEquipes(){		
@@ -209,7 +224,7 @@ public class Match {
 	public void integrerDansBD() throws SQLException{
 		
 		Statement state = this.connect.createStatement();
-		String requete="insert into projettutore.match values (DEFAULT,NULL,'"+this.scoreMT+"','"+this.scoreFT+"',"+this.nbSpectateur+",'"+this.stade+"','"+this.resume.getTexte()+"', NULL,"+this.compet.getId()+")";
+		String requete="insert into projettutore.match values (DEFAULT,'"+this.stade+"','"+this.resume.getTexte()+"',"+this.nbSpectateur+",NULL,"+this.compet.getId()+",NULL,"+this.equipeDomicile.getId()+","+this.equipeExterieure.getId()+")";
 		state.executeUpdate(requete);
 		
 	}
