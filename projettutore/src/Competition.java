@@ -26,15 +26,21 @@ public class Competition {
 	}
 
 	public void trouverId() throws SQLException{
+		
+		String requete;
+		
 		Statement state = this.connect.createStatement();
-		ResultSet result= state.executeQuery("select idcompetition from projettutore.Competition WHERE nomcompetition='"+this.nom+"'");
+		requete="select idcompetition from projettutore.Competition WHERE nomcompetition='"+this.nom+"'";
+		ResultSet result= state.executeQuery(requete);
 		ResultSetMetaData resultMeta = result.getMetaData();
 		if(result.next()){
 			this.id=Integer.parseInt(result.getObject(1).toString());
 		}
 		else{
-			System.out.println();
-			state.executeUpdate("INSERT INTO projettutore.competition VALUES (DEFAULT,'"+this.nom+"')");
+			System.out.println("insertion de la competition");
+			requete="INSERT INTO projettutore.competition VALUES (DEFAULT,'"+this.nom+"')";
+			System.out.println(requete);
+			state.executeUpdate(requete);
 			this.trouverId();
 		}
 }

@@ -16,6 +16,11 @@ public class Arbitre {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.connect = connect;
+		try{
+			this.obtenirId();
+		}catch(SQLException err){
+			System.out.println("erreur lors de l'obtention de l'id de l'arbitre");
+		}
 	}
 	
 	public void obtenirId() throws SQLException{

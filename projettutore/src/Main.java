@@ -43,16 +43,8 @@ public class Main {
 		File fichier = new File("src/ressources/parisSG_Caen_versionASADERA_joueur.xml");
 		//File fichier=new File ("src/ressources/italieFrance_tournoiFeminin6nations.xml");
 		Document doc=lireXML(fichier);
-		List<Element> faits=doc.getRootElement().getChild("compteRendu").getChildren();
-		for(Element e:faits){
-			System.out.println(e.getChildren("faitArbitral"));//.getChild("faitArbitral"));//.getAttributeValue("poste"));
-		}
-		//Match match=new Match(connect,doc);
-	/*	List<Element> faitJeu=doc.getRootElement().getChild("compteRendu").getChildren();
-		
-		for(Element e: faitJeu){
-			System.out.println(e.getValue());
-		}*/
+		Match match=new Match(connect,doc);
+	
 	}
 	
 	
