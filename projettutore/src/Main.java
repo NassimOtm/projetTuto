@@ -19,7 +19,7 @@ import org.jdom2.output.XMLOutputter;
 
 public class Main {
 
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
 
 		String url,user,mdp;
 		Parametres param=null;
@@ -46,7 +46,7 @@ public class Main {
 		Match match=new Match(connect,doc);
 	
 	}
-	*/
+	
 	
 	public static Document lireXML(File fichier) {
 		
