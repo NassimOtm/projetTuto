@@ -16,7 +16,6 @@ public class JoueurChamp {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
-		System.out.println("creation de "+nom+" "+prenom);
 		this.poste = poste;
 		this.connect = connect;
 		try{
@@ -28,10 +27,11 @@ public class JoueurChamp {
 	
 	public void obtenirId() throws SQLException{
 		
+		
 		Statement state = this.connect.createStatement();
 		String requete="";
-		if(this.nom.length()!=0){
-			requete="select idjoueur from projettutore.joueur where (nom='"+this.nom+"' and prenom='"+this.prenom+"') OR (nom='"+this.prenom+"' and prenom='"+this.nom+"')";
+		if(this.prenom.length()!=0){
+			requete="select idjoueur from projettutore.joueur where (nom='"+this.nom+"' and prenom='"+this.prenom+"') OR (nom='"+this.prenom+"' and prenom='"+this.nom+"') OR (nom='"+this.prenom+" "+this.nom+"') OR (nom='"+this.nom+"')";
 		}
 		else{
 			requete="select idjoueur from projettutore.joueur where nom='"+this.nom+"' or prenom='"+this.nom+"'";
@@ -40,10 +40,14 @@ public class JoueurChamp {
 		ResultSet result= state.executeQuery(requete);
 		ResultSetMetaData resultMeta = result.getMetaData();
 		if(result.next()){
-			this.id=Integer.parseInt(result.getObject(1).toString());	
+			this.id=Integer.parseInt(result.getObject(1).toString());
 		}	
 		else{
-			requete="INSERT INTO projettutore.joueur values (DEFAULT,'"+this.nom+"','"+this.prenom+"','"+this.poste+"',NULL)";
+			if(this.poste!=null){
+				requete="INSERT INTO projettutore.joueur values (DEFAULT,'"+this.nom+"','"+this.prenom+"','"+this.poste+"',NULL)";
+			}else{
+				requete="INSERT INTO projettutore.joueur values (DEFAULT,'"+this.nom+"','"+this.prenom+"',NULL,NULL)";
+			}
 			state.executeUpdate(requete);
 			this.obtenirId();
 		}
@@ -68,6 +72,7 @@ public class JoueurChamp {
 	public Connection getConnect() {
 		return connect;
 	}
+	
 
 	@Override
 	public int hashCode() {

@@ -37,9 +37,7 @@ public class Competition {
 			this.id=Integer.parseInt(result.getObject(1).toString());
 		}
 		else{
-			System.out.println("insertion de la competition");
 			requete="INSERT INTO projettutore.competition VALUES (DEFAULT,'"+this.nom+"')";
-			System.out.println(requete);
 			state.executeUpdate(requete);
 			this.trouverId();
 		}

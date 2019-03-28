@@ -19,7 +19,7 @@ import org.jdom2.output.XMLOutputter;
 
 public class Main {
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 
 		String url,user,mdp;
 		Parametres param=null;
@@ -40,13 +40,13 @@ public class Main {
 		}while(erreurConnect);	
 		System.out.println("Connexion reussi");
 		
-		File fichier = new File("src/ressources/parisSG_Caen_versionASADERA_joueur.xml");
-		//File fichier=new File ("src/ressources/italieFrance_tournoiFeminin6nations.xml");
+		//File fichier = new File("src/ressources/parisSG_Caen_versionASADERA_joueur.xml");
+		File fichier=new File ("src/ressources/italieFrance_tournoiFeminin6nations.xml");
 		Document doc=lireXML(fichier);
 		Match match=new Match(connect,doc);
 	
 	}
-	
+	*/
 	
 	public static Document lireXML(File fichier) {
 		
